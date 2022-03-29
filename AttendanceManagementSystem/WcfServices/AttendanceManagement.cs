@@ -23,6 +23,7 @@ namespace WcfServices
         public virtual DbSet<TeacherService.Teacher> TeacherModel { get; set; }
         public virtual DbSet<AdminService.Admin> AdminModel { get; set; }
         public virtual DbSet<StudentService.Student> StudentModel { get; set; }
+        public virtual DbSet<AttendanceService.Attendance> AttendanceModel { get; set; }
     }
 
     //public class MyEntity

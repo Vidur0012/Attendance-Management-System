@@ -16,8 +16,21 @@ namespace WcfServices.AdminService
 {
     public class AdminService : IAdminService
     {
+        private AttendanceManagement db = new AttendanceManagement();
 
-
+        public string AdminLogin(string username, string password)
+        {
+            Admin admin = db.AdminModel.Where(a => a.Username == username && a.password==password).FirstOrDefault();
+            if(admin!=null)
+            {
+                return "Login Sucessful!";
+            }
+            else
+            {
+                return "Invalid Credentials!";
+            }
+        }
+       
     }
 }
 

@@ -1,0 +1,13 @@
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.csproj.AssemblyReference.cache
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.csproj.CoreCompileInputs.cache
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\ConsoleHost.exe.config
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\ConsoleHost.exe
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\ConsoleHost.pdb
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\WcfServices.dll
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\EntityFramework.dll
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\WcfServices.pdb
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\WcfServices.dll.config
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\EntityFramework.xml
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.csproj.CopyComplete
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.exe
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.pdb

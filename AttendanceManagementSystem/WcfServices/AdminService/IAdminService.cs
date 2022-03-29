@@ -11,8 +11,8 @@ namespace WcfServices.AdminService
     [ServiceContract]
     public interface IAdminService
     {
-        
-
+        [OperationContract]
+        string AdminLogin(string username, string password);
 
     }
 }

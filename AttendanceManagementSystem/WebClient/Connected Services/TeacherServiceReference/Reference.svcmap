@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cbb436f6-dad0-4a06-9c16-4a0eb83b37ab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfServices/TeacherService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f30e59a8-2bef-4c35-93d9-1ccb0b82aa9f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServices/TeacherService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="dac8956a-0f41-4e40-8368-aecdc9ea5804" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServices/TeacherService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5f0aa822-cc95-452e-b6b7-abeb32425901" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServices/TeacherService/mex" />
+    <MetadataFile FileName="WcfServices.TeacherService.xsd" MetadataType="Schema" ID="c9e4abe9-7fcd-4c5e-b34b-80e784beb87f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServices/TeacherService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

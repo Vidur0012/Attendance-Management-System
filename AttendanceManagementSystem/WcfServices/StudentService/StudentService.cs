@@ -38,7 +38,7 @@ namespace WcfServices.StudentService
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return "Something went wrong";
+                return "Something went wrong!";
             }
         }
 
@@ -57,7 +57,7 @@ namespace WcfServices.StudentService
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return "Something went wrong";
+                return "Something went wrong!";
             }
 
         }
@@ -74,7 +74,7 @@ namespace WcfServices.StudentService
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return "Something went wrong";
+                return "Something went wrong!";
             }
         }
     }
