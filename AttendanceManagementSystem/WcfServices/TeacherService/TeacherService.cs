@@ -8,58 +8,73 @@ using System.Threading.Tasks;
 
 namespace WcfServices.TeacherService
 {
-    public class TeacherService:ITeacherService
+    public class TeacherService : ITeacherService
     {
         private AttendanceManagement db = new AttendanceManagement();
-        public List<Teacher>  GetTeachers()
+        public List<Teacher> GetTeachers()
         {
-            List<Teacher> Teachers = db.TeacherModel.ToList();
-            return Teachers;
+            List<Teacher> teachers = db.TeacherModel.ToList();
+            return teachers;
         }
 
         public Teacher GetTeacher(int id)
         {
-            Teacher teacher = db.TeacherModel.Where(t => t.Id == id).FirstOrDefault();  
+            Teacher teacher = db.TeacherModel.Where(t => t.Id == id).FirstOrDefault();
             return teacher;
         }
-        public string AddTeacher(Teacher Teacher)
-        {
-            Teacher t = new Teacher();
-            t.Name = Teacher.Name;
-            t.Subject = Teacher.Subject;
-            t.Class = Teacher.Class;
-
-            db.TeacherModel.Add(t);
-            db.SaveChanges();
-            return "Teacher Added Successfull";
-        }
-
-        public string UpdateTeacher(Teacher Teacher)
+        public string AddTeacher(Teacher teacher)
         {
             try
             {
-                Teacher t = db.TeacherModel.Where(tmp => tmp.Id == Teacher.Id).FirstOrDefault();
-                t.Name = Teacher.Name;
-                t.Subject = Teacher.Subject;
-                t.Class = Teacher.Class;
-                //db.Entry(Teacher).State = System.Data.Entity.EntityState.Modified;
+                Teacher t = new Teacher();
+                t.Name = teacher.Name;
+                t.Subject = teacher.Subject;
+                t.Class = teacher.Class;
+
+                db.TeacherModel.Add(t);
+                db.SaveChanges();
+                return "Teacher Added Successfull";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return "Something went wrong!";
+            }
+        }
+
+        public string UpdateTeacher(Teacher teacher)
+        {
+            try
+            {
+                Teacher t = db.TeacherModel.Where(o => o.Id == teacher.Id).FirstOrDefault();
+                t.Name = teacher.Name;
+                t.Subject = teacher.Subject;
+                t.Class = teacher.Class;
                 db.SaveChanges();
                 return "Teacher Updated Successfully!!";
-            }catch (Exception ex)
-            {
-
-                Console.WriteLine(ex.Message);
-                return "Something went wrong";
             }
-            
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return "Something went wrong!";
+            }
+
         }
 
         public String DeleteTeacher(int id)
         {
-            var t = db.TeacherModel.Where(tmp => id == tmp.Id).FirstOrDefault();
-            db.TeacherModel.Remove(t);
-            db.SaveChanges();
-            return "Teacher Deleted Successfully";
+            try
+            {
+                Teacher t = db.TeacherModel.Where(o => o.Id == id).FirstOrDefault();
+                db.TeacherModel.Remove(t);
+                db.SaveChanges();
+                return "Teacher Deleted Successfully";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return "Something went wrong!";
+            }
         }
     }
 }

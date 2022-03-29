@@ -14,7 +14,7 @@ using System.Text;
 
 namespace WcfServices.AdminService
 {
-    public class AdminService
+    public class AdminService : IAdminService
     {
 
 
