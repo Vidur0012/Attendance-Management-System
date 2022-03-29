@@ -1,0 +1,14 @@
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.csproj.AssemblyReference.cache
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.csproj.CoreCompileInputs.cache
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\bin\Debug\WcfServices.dll.config
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\bin\Debug\WcfServices.dll
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\bin\Debug\WcfServices.pdb
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\bin\Debug\EntityFramework.dll
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\bin\Debug\EntityFramework.SqlServer.dll
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\bin\Debug\EntityFramework.xml
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\bin\Debug\EntityFramework.SqlServer.xml
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.csproj.CopyComplete
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.dll
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.pdb
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.initial.resources
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.csproj.GenerateResource.cache
