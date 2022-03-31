@@ -77,5 +77,11 @@ namespace WcfServices.StudentService
                 return "Something went wrong!";
             }
         }
+
+        public List<Student> GetStudentByClass(int cid)
+        {
+            List<Student> students = (from a in db.StudentModel where a.Class == cid select a).ToList();
+            return students;
+        }
     }
 }

@@ -86,6 +86,8 @@
     <None Include="Connected Services\StudentService\StudentService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="assets\img\home.png" />
+    <Content Include="AttendancePage.aspx" />
     <Content Include="Connected Services\StudentService\WebClient.StudentService.Student.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -137,6 +139,13 @@
     </Compile>
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendancePage.aspx.cs">
+      <DependentUpon>AttendancePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendancePage.aspx.designer.cs">
+      <DependentUpon>AttendancePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\AdminService\Reference.cs">
       <AutoGen>True</AutoGen>

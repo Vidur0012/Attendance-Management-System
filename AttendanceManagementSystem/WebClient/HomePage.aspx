@@ -9,14 +9,14 @@
     <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body>
-    <form id="form1" runat="server">
+<body >
+    <form id="form1" class="m-5" runat="server">
         <div>
             <div>
                 <div class="page-content page-container" id="page-content">
                     <div class="padding">
                         <div class="card">
-                            <div class="row">
+                            <div class="row p-3">
                                 <div class="col-md-6">
                                     <h3 class="card-header text-white bg-dark">Attendance Management System
                                     </h3>
@@ -46,16 +46,16 @@
                                         <label class="form-control card-header table bg-info text-black">Teacher Panel</label>
                                         <br />
                                         <label class="col-md-5 col-form-label-lg">Teacher</label>
-                                        <asp:DropDownList  class="col-md-5 btn btn-outline-info dropdown-toggle" type="button" data-toggle="dropdown"  
-                                            ID="teacherlist" runat="server">
+                                        <asp:DropDownList  class="col-md-5 btn btn-outline-dark dropdown-toggle"  data-toggle="dropdown"  
+                                            ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" >
                                           </asp:DropDownList>
                                        
-                                         <asp:Button ID="Button2" class="btn btn-primary col-md-4 mt-3" runat="server" Text="Enter  " OnClick="Button2_Click"  />
+                                         <asp:Button ID="Button2" class="btn btn-primary col-md-4 mt-3" runat="server" CausesValidation="false" Text="Enter" OnClick="Button2_Click"  />
 
                                     </div>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/draw1.png" class="img-fluid" alt="Sample image" />
+                                    <img src="assets/img/home.png" class="img-fluid" alt="Sample image" />
                                 </div>
                             </div>
                         </div>
@@ -65,5 +65,5 @@
         </div>
     </form>
     <script src="Scripts/bootstrap.min.js"></script>
-</body>
+        </body>
     </html>

@@ -9,20 +9,28 @@ namespace WebClient
 {
     public partial class HomePage : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Enabled = false;
-            TeacherService.TeacherServiceClient ts = new TeacherService.TeacherServiceClient();
-            TeacherService.Teacher[] tl =   ts.GetTeachers();
-            teacherlist.DataSource =  tl;
-            teacherlist.DataTextField = "Name";
-            teacherlist.DataValueField = "Id";
-            teacherlist.DataBind();
+
+            if (!IsPostBack)
+            {
+
+                Label1.Visible = false;
+                TeacherService.TeacherServiceClient ts = new TeacherService.TeacherServiceClient();
+                TeacherService.Teacher[] tl =   ts.GetTeachers();
+                DropDownList1.DataSource =  tl;
+                DropDownList1.DataTextField = "Name";
+                DropDownList1.DataValueField = "Id";
+                DropDownList1.SelectedIndex = 0;
+                DropDownList1.DataBind();
+            }
             
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             AdminService.AdminServiceClient asc = new AdminService.AdminServiceClient();
             string u_name = TextBox1.Text.ToString().ToLower();
             string password = TextBox2.Text.ToString().ToLower();
@@ -35,13 +43,20 @@ namespace WebClient
             else
             {
                 Label1.Text = "Invalid Login Attempt";
-                Label1.Enabled=true;
+                Label1.Visible=true;
             }
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            Response.Redirect("AttendancePage.aspx");
+        }
 
+       
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["SelectedTeacher"] =  DropDownList1.SelectedItem.Value;
         }
     }
 }

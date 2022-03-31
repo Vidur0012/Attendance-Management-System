@@ -13,6 +13,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetStudentByClass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudentByClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfServices.StudentService" minOccurs="0" name="GetStudentByClassResult" nillable="true" type="q2:ArrayOfStudent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetStudent">
     <xs:complexType>
       <xs:sequence>
@@ -23,14 +37,14 @@
   <xs:element name="GetStudentResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfServices.StudentService" minOccurs="0" name="GetStudentResult" nillable="true" type="q2:Student" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfServices.StudentService" minOccurs="0" name="GetStudentResult" nillable="true" type="q3:Student" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddStudent">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfServices.StudentService" minOccurs="0" name="student" nillable="true" type="q3:Student" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServices.StudentService" minOccurs="0" name="student" nillable="true" type="q4:Student" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -58,7 +72,7 @@
   <xs:element name="UpdateStudent">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServices.StudentService" minOccurs="0" name="student" nillable="true" type="q4:Student" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfServices.StudentService" minOccurs="0" name="student" nillable="true" type="q5:Student" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

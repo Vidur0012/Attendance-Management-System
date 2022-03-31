@@ -116,6 +116,12 @@ namespace WebClient.StudentService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudents", ReplyAction="http://tempuri.org/IStudentService/GetStudentsResponse")]
         System.Threading.Tasks.Task<WebClient.StudentService.Student[]> GetStudentsAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudentByClass", ReplyAction="http://tempuri.org/IStudentService/GetStudentByClassResponse")]
+        WebClient.StudentService.Student[] GetStudentByClass(int cid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudentByClass", ReplyAction="http://tempuri.org/IStudentService/GetStudentByClassResponse")]
+        System.Threading.Tasks.Task<WebClient.StudentService.Student[]> GetStudentByClassAsync(int cid);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudent", ReplyAction="http://tempuri.org/IStudentService/GetStudentResponse")]
         WebClient.StudentService.Student GetStudent(int id);
         
@@ -174,6 +180,14 @@ namespace WebClient.StudentService {
         
         public System.Threading.Tasks.Task<WebClient.StudentService.Student[]> GetStudentsAsync() {
             return base.Channel.GetStudentsAsync();
+        }
+        
+        public WebClient.StudentService.Student[] GetStudentByClass(int cid) {
+            return base.Channel.GetStudentByClass(cid);
+        }
+        
+        public System.Threading.Tasks.Task<WebClient.StudentService.Student[]> GetStudentByClassAsync(int cid) {
+            return base.Channel.GetStudentByClassAsync(cid);
         }
         
         public WebClient.StudentService.Student GetStudent(int id) {
