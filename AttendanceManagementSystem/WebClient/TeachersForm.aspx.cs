@@ -11,8 +11,13 @@ namespace WebClient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            TeacherServiceReference.TeacherServiceClient tsc = new TeacherServiceReference.TeacherServiceClient();
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            AdminService.AdminServiceClient asc = new AdminService.AdminServiceClient();
+            Label1.Text = asc.AdminLogin("admin", "admin1234");
         }
     }
 }

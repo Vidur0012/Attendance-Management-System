@@ -12,8 +12,14 @@ namespace ConsoleHost
     {
         static void Main(string[] args)
         {
-            ServiceMetadataBehavior mbehave = new ServiceMetadataBehavior();
-            mbehave.HttpGetEnabled = true;
+            ServiceMetadataBehavior mbehave1 = new ServiceMetadataBehavior();
+            mbehave1.HttpGetEnabled = true;
+            ServiceMetadataBehavior mbehave2 = new ServiceMetadataBehavior();
+            mbehave2.HttpGetEnabled = true;
+            ServiceMetadataBehavior mbehave3 = new ServiceMetadataBehavior();
+            mbehave3.HttpGetEnabled = true;
+            ServiceMetadataBehavior mbehave4 = new ServiceMetadataBehavior();
+            mbehave4.HttpGetEnabled = true;
 
             ServiceHost sh1 = null, sh2 = null, sh3 = null, sh4 = null;
 
@@ -24,22 +30,22 @@ namespace ConsoleHost
 
             sh1 = new ServiceHost(typeof(WcfServices.AdminService.AdminService), Uri1);
             sh1.AddServiceEndpoint(typeof(WcfServices.AdminService.IAdminService), new WSHttpBinding(), "");
-            sh1.Description.Behaviors.Add(mbehave);
+            sh1.Description.Behaviors.Add(mbehave1);
             sh1.Open();
 
             sh2 = new ServiceHost(typeof(WcfServices.TeacherService.TeacherService), Uri2);
             sh2.AddServiceEndpoint(typeof(WcfServices.TeacherService.ITeacherService), new WSHttpBinding(), "");
-            sh2.Description.Behaviors.Add(mbehave);
+            sh2.Description.Behaviors.Add(mbehave2);
             sh2.Open();
 
             sh3 = new ServiceHost(typeof(WcfServices.StudentService.StudentService), Uri3);
             sh3.AddServiceEndpoint(typeof(WcfServices.StudentService.IStudentService), new WSHttpBinding(), "");
-            sh3.Description.Behaviors.Add(mbehave);
+            sh3.Description.Behaviors.Add(mbehave3);
             sh3.Open();
 
             sh4 = new ServiceHost(typeof(WcfServices.AttendanceService.AttendanceService), Uri4);
             sh4.AddServiceEndpoint(typeof(WcfServices.AttendanceService.IAttendanceService), new WSHttpBinding(), "");
-            sh4.Description.Behaviors.Add(mbehave);
+            sh4.Description.Behaviors.Add(mbehave4);
             sh4.Open();
 
             Console.WriteLine("All Services Hosted..");

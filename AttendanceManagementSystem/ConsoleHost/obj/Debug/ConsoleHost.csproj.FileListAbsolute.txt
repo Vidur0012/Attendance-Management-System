@@ -11,3 +11,5 @@ C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleH
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.csproj.CopyComplete
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.exe
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.pdb
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\EntityFramework.SqlServer.xml
