@@ -127,6 +127,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="StudentsAndTeachers.aspx" />
     <Content Include="TeachersForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -161,6 +162,13 @@
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentsAndTeachers.aspx.cs">
+      <DependentUpon>StudentsAndTeachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsAndTeachers.aspx.designer.cs">
+      <DependentUpon>StudentsAndTeachers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TeachersForm.aspx.cs">
       <DependentUpon>TeachersForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
