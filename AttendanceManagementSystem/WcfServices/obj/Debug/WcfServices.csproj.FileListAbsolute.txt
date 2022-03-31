@@ -27,3 +27,4 @@ C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServi
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.dll
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.pdb
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.attendanceModel.resources
+E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.attendanceModel.resources
