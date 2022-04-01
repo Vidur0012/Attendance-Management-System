@@ -123,11 +123,6 @@
                 <div class="mx-4 card-header d-flex justify-content-between">
                     <asp:Button ID="Button3" CssClass="btn btn-primary col-md-4" runat="server" Text="Teachers"
                         OnClick="Button3_Click" />
-                    <asp:Button ID="Button4" CssClass="btn btn-primary col-md-4" runat="server" Text="Students" />
-                </div>
-                <div class="card-body">
-                    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-
                 </div>
             </div>
         </form>

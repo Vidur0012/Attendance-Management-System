@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ViewAttendance.aspx" />
     <None Include="Connected Services\AdminService\AdminService.disco" />
     <None Include="Connected Services\AdminService\configuration91.svcinfo" />
     <None Include="Connected Services\AdminService\configuration.svcinfo" />
@@ -76,6 +77,28 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\AttendanceService\AttendanceService.wsdl" />
+    <None Include="Connected Services\AttendanceService\AttendanceService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AttendanceService\AttendanceService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AttendanceService\AttendanceService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AttendanceService\AttendanceService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AttendanceService\AttendanceService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AttendanceService\AttendanceService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\AttendanceService\WebClient.AttendanceService.Attendance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\StudentService\StudentService.wsdl" />
     <None Include="Connected Services\StudentService\StudentService.xsd">
       <SubType>Designer</SubType>
@@ -88,6 +111,13 @@
     </None>
     <Content Include="assets\img\home.png" />
     <Content Include="AttendancePage.aspx" />
+    <None Include="Connected Services\AttendanceService\AttendanceService.disco" />
+    <None Include="Connected Services\AttendanceService\configuration91.svcinfo" />
+    <None Include="Connected Services\AttendanceService\configuration.svcinfo" />
+    <None Include="Connected Services\AttendanceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\StudentService\WebClient.StudentService.Student.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -129,6 +159,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="StudentsAndTeachers.aspx" />
     <Content Include="TeachersForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -152,6 +183,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\AttendanceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\StudentService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,12 +206,26 @@
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentsAndTeachers.aspx.cs">
+      <DependentUpon>StudentsAndTeachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsAndTeachers.aspx.designer.cs">
+      <DependentUpon>StudentsAndTeachers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TeachersForm.aspx.cs">
       <DependentUpon>TeachersForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TeachersForm.aspx.designer.cs">
       <DependentUpon>TeachersForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAttendance.aspx.cs">
+      <DependentUpon>ViewAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAttendance.aspx.designer.cs">
+      <DependentUpon>ViewAttendance.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AdminService\" />
+    <WCFMetadataStorage Include="Connected Services\AttendanceService\" />
     <WCFMetadataStorage Include="Connected Services\StudentService\" />
     <WCFMetadataStorage Include="Connected Services\TeacherService\" />
   </ItemGroup>

@@ -22,7 +22,7 @@ namespace WebClient
                 DropDownList1.DataSource =  tl;
                 DropDownList1.DataTextField = "Name";
                 DropDownList1.DataValueField = "Id";
-                DropDownList1.SelectedIndex = 0;
+                Session["SelectedTeacher"] = ts.GetTeacher(0);
                 DropDownList1.DataBind();
             }
             
@@ -56,7 +56,8 @@ namespace WebClient
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Session["SelectedTeacher"] =  DropDownList1.SelectedItem.Value;
+            TeacherService.TeacherServiceClient ts = new TeacherService.TeacherServiceClient();
+            Session["SelectedTeacher"] = ts.GetTeacher(Int32.Parse(DropDownList1.SelectedItem.Value));
         }
     }
 }

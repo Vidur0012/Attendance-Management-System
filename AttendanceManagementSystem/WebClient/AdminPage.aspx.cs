@@ -17,7 +17,7 @@ namespace WebClient
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("/StudentsAndTeachers.aspx");
         }
 
         protected void Button1_Click(object sender, EventArgs e)

@@ -14,8 +14,25 @@
 
         <div class="card">
             <div class="card-header bg-dark text-white">
-                <h1>Attendance Sheet</h1>
+                <h1>Teacher Name:&nbsp;&nbsp;<%=teacher.Name%>
+                    <div style="float: right">
+                        Date : <%=DateTime.Now.ToString("dddd, MMMM dd yyyy")%>
+                    </div>
+                </h1>
+                <h1>Class:&nbsp;&nbsp;<%=teacher.Class%>
 
+                    <div style="float: right">
+                        <a href="ViewAttendance.aspx" class="btn btn-info mx-5">View Attendance</a>
+
+                    </div>
+                </h1>
+
+            </div>
+            <div class="card-header text-center">
+                
+                <h2>Attendance Sheet</h2>
+
+                <asp:Label ID="Label1" CssClass="form-control alert-danger" runat="server" Text="hello"></asp:Label>
             </div>
             <div class="card-body">
                 <asp:GridView CssClass="auto-style1" runat="server" BackColor="White" BorderColor="#999999"
@@ -54,8 +71,7 @@
             </div>
             <div class="card-footer">
                 <center>
-
-                <button class="btn btn-primary">Submit</button>
+                    <asp:Button ID="Button1" OnClick="Button1_Click" class="btn btn-primary" runat="server" Text="Submit" />
                 </center>
             </div>
 
