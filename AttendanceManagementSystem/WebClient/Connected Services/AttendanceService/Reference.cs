@@ -361,6 +361,12 @@ namespace WebClient.AttendanceService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByDate", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByDateResponse")]
         System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByDateAsync(System.DateTime dt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDate", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDateResponse")]
+        WebClient.AttendanceService.Attendance[] GetAllAttendanceByTeacherAndDate(int tid, System.DateTime dt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDate", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDateResponse")]
+        System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByTeacherAndDateAsync(int tid, System.DateTime dt);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -412,6 +418,14 @@ namespace WebClient.AttendanceService {
         
         public System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByDateAsync(System.DateTime dt) {
             return base.Channel.GetAllAttendanceByDateAsync(dt);
+        }
+        
+        public WebClient.AttendanceService.Attendance[] GetAllAttendanceByTeacherAndDate(int tid, System.DateTime dt) {
+            return base.Channel.GetAllAttendanceByTeacherAndDate(tid, dt);
+        }
+        
+        public System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByTeacherAndDateAsync(int tid, System.DateTime dt) {
+            return base.Channel.GetAllAttendanceByTeacherAndDateAsync(tid, dt);
         }
     }
 }

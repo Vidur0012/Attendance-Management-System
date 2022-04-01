@@ -49,4 +49,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllAttendanceByTeacherAndDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tid" type="xs:int" />
+        <xs:element minOccurs="0" name="dt" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAttendanceByTeacherAndDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfServices.AttendanceService" minOccurs="0" name="GetAllAttendanceByTeacherAndDateResult" nillable="true" type="q5:ArrayOfAttendance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

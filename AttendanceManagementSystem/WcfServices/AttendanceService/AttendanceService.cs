@@ -48,5 +48,23 @@ namespace WcfServices.AttendanceService
             IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.Date == dt select a;
             return lst;
         }
+        public IEnumerable<Attendance> GetAllAttendanceByTeacherAndDate(int tid, DateTime dt)
+        {
+            IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.T.Id == tid select a;
+            Func<Attendance, bool> filt = x =>
+             {
+                 DateTime d = x.Date;
+                 if (d.Date == dt.Date)
+                 {
+                     return true;
+                 }
+                 else
+                 {
+                     return false;
+                 }
+             };
+            lst = lst.Where(filt);
+            return lst;
+        }
     }
 }

@@ -22,6 +22,7 @@ namespace WebClient
 
                 StudentService.StudentServiceClient student = new StudentService.StudentServiceClient();
                 stu_list = student.GetStudentByClass(Class);
+                Session["student_list"] = stu_list;
                 Label1.Visible = false;
 
                 if(!IsPostBack)

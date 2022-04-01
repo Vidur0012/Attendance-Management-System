@@ -17,7 +17,10 @@ namespace WcfServices.AttendanceService
         IEnumerable<Attendance> GetAllAttendanceByTeacher(int tid);
         [OperationContract]
         IEnumerable<Attendance> GetAllAttendanceByDate(DateTime dt);
-       
+        [OperationContract]
+
+        IEnumerable<Attendance> GetAllAttendanceByTeacherAndDate(int tid, DateTime dt);
+
 
 
     }

@@ -22,11 +22,11 @@
 
                     <div style="float: right">
                          Select date
-                        <asp:TextBox OnTextChanged="TextBox1_TextChanged" CssClass="h3" ID="TextBox1"   TextMode="Date" runat="server"></asp:TextBox>
+                        <asp:TextBox OnTextChanged="TextBox1_TextChanged" AutoPostBack="true" CssClass="h3" ID="TextBox1"   TextMode="Date" runat="server"></asp:TextBox>
 
                     </div>
                 </h1>
-
+                
             </div>
             <div class="card-header text-center">
 
@@ -52,22 +52,32 @@
                         </tr>
                     </thead>
                     <tbody >
+                        <% foreach (AttendanceEntry att in AttendanceEntries)
+                            {%>
                         <tr>
+                            <td>
+                                <%:att.Id%>
+                            </td>
+                            <td>
+                                <%:att.Name%>
+                            </td>
+                            <td>
+                                <%:att.RollNo%>
+                            </td>
                             <th>
-                                No
-                            </th>
-                            <th>
-                                Name
-                            </th>
-                            <th>
-                                Roll No
-                            </th>
-                            <th>
+                                <%if (att.Present)
+                                    { %>
                                 <span class="btn btn-success rounded-pill " style="cursor:text">Present</span>
+                                <%}
+                                    else
+                                    { %>
                                 <span class="btn btn-danger rounded-pill " style="cursor:text">Absent</span>
+                                <%} %>
                                 
                             </th>
                         </tr>
+                        <% }%>
+
                     </tbody>
                 </table>
             </div>

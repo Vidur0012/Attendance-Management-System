@@ -19,7 +19,6 @@ C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServi
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\bin\Debug\EntityFramework.xml
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.csproj.AssemblyReference.cache
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.initial.resources
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.csproj.GenerateResource.cache
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.csproj.CoreCompileInputs.cache
