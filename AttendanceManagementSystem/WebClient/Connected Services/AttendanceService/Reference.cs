@@ -350,18 +350,6 @@ namespace WebClient.AttendanceService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/AddAttendances", ReplyAction="http://tempuri.org/IAttendanceService/AddAttendancesResponse")]
         System.Threading.Tasks.Task<string> AddAttendancesAsync(int[] sids, bool[] presents, int tid, System.DateTime dt, int cls, string sub);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacher", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherResponse")]
-        WebClient.AttendanceService.Attendance[] GetAllAttendanceByTeacher(int tid);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacher", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherResponse")]
-        System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByTeacherAsync(int tid);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByDate", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByDateResponse")]
-        WebClient.AttendanceService.Attendance[] GetAllAttendanceByDate(System.DateTime dt);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByDate", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByDateResponse")]
-        System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByDateAsync(System.DateTime dt);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDate", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDateResponse")]
         WebClient.AttendanceService.Attendance[] GetAllAttendanceByTeacherAndDate(int tid, System.DateTime dt);
         
@@ -402,22 +390,6 @@ namespace WebClient.AttendanceService {
         
         public System.Threading.Tasks.Task<string> AddAttendancesAsync(int[] sids, bool[] presents, int tid, System.DateTime dt, int cls, string sub) {
             return base.Channel.AddAttendancesAsync(sids, presents, tid, dt, cls, sub);
-        }
-        
-        public WebClient.AttendanceService.Attendance[] GetAllAttendanceByTeacher(int tid) {
-            return base.Channel.GetAllAttendanceByTeacher(tid);
-        }
-        
-        public System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByTeacherAsync(int tid) {
-            return base.Channel.GetAllAttendanceByTeacherAsync(tid);
-        }
-        
-        public WebClient.AttendanceService.Attendance[] GetAllAttendanceByDate(System.DateTime dt) {
-            return base.Channel.GetAllAttendanceByDate(dt);
-        }
-        
-        public System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByDateAsync(System.DateTime dt) {
-            return base.Channel.GetAllAttendanceByDateAsync(dt);
         }
         
         public WebClient.AttendanceService.Attendance[] GetAllAttendanceByTeacherAndDate(int tid, System.DateTime dt) {

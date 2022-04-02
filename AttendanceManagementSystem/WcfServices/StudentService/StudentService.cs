@@ -26,6 +26,11 @@ namespace WcfServices.StudentService
         {
             try
             {
+                Student s_tmp = (from st in db.StudentModel where st.Class == student.Class && st.RollNo == student.RollNo select st ).FirstOrDefault();
+                if(s_tmp != null)
+                {
+                    return "Duplicate";
+                }
                 Student s = new Student();
                 s.Name = student.Name;
                 s.Class = student.Class;
@@ -37,7 +42,8 @@ namespace WcfServices.StudentService
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                System.Diagnostics.Debug.Write(ex.Message);
+
                 return "Something went wrong!";
             }
         }
@@ -56,7 +62,8 @@ namespace WcfServices.StudentService
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                System.Diagnostics.Debug.Write(ex.Message);
+
                 return "Something went wrong!";
             }
 
@@ -73,7 +80,7 @@ namespace WcfServices.StudentService
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                System.Diagnostics.Debug.Write(ex.Message);
                 return "Something went wrong!";
             }
         }

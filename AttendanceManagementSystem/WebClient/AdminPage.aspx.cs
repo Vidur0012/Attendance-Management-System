@@ -11,6 +11,10 @@ namespace WebClient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["admin"] == null)
+            {
+                Response.Redirect("HomePage.aspx");
+            }
             Label1.Enabled = false;
 
         }
@@ -36,6 +40,7 @@ namespace WebClient
         {
             StudentService.StudentServiceClient sc = new StudentService.StudentServiceClient();
             StudentService.Student s = new StudentService.Student();
+           
             s.Name = Sname.Text;
             s.RollNo = Int32.Parse(rollno.Text);
             s.Class = Int32.Parse(DropDownList1.SelectedValue);
@@ -44,6 +49,12 @@ namespace WebClient
             Label1.Text=response;
 
 
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("HomePage.aspx");
         }
     }
 }

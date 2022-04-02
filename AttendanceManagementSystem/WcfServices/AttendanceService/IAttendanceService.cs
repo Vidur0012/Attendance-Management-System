@@ -13,12 +13,6 @@ namespace WcfServices.AttendanceService
         [OperationContract]
         string AddAttendances(List<int> sids, List<bool> presents, int tid, DateTime dt, int cls, string sub);
         [OperationContract]
-
-        IEnumerable<Attendance> GetAllAttendanceByTeacher(int tid);
-        [OperationContract]
-        IEnumerable<Attendance> GetAllAttendanceByDate(DateTime dt);
-        [OperationContract]
-
         IEnumerable<Attendance> GetAllAttendanceByTeacherAndDate(int tid, DateTime dt);
 
 

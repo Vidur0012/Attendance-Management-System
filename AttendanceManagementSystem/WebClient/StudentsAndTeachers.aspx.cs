@@ -17,6 +17,7 @@ namespace WebClient
             
             if (!this.IsPostBack)
             {
+
                 StudentService.StudentServiceClient ssc = new StudentService.StudentServiceClient();
                 StudentService.Student[] StudentList = ssc.GetStudents();
                 DataTable students = new DataTable();
@@ -29,7 +30,7 @@ namespace WebClient
                 {
                     students.Rows.Add(StudentList[i].Id, StudentList[i].Name, StudentList[i].Class, StudentList[i].RollNo);
                 }
-                ViewState["students"] = students;
+                Session["students"] = students;
                 BindGridStudent();
 
                 TeacherService.TeacherServiceClient tsc = new TeacherService.TeacherServiceClient();
@@ -45,19 +46,19 @@ namespace WebClient
                 {
                     teachers.Rows.Add(TeacherList[i].Id, TeacherList[i].Name, TeacherList[i].Class, TeacherList[i].Subject);
                 }
-                ViewState["teachers"] = teachers;
+                Session["teachers"] = teachers;
                 BindGridTeacher();
 
             }
         }
         protected void BindGridStudent()
         {
-            GridViewStudent.DataSource = ViewState["students"] as DataTable;
+            GridViewStudent.DataSource = Session["students"] as DataTable;
             GridViewStudent.DataBind();
         }
         protected void BindGridTeacher()
         {
-            GridViewTeacher.DataSource = ViewState["teachers"] as DataTable;
+            GridViewTeacher.DataSource = Session["teachers"] as DataTable;
             GridViewTeacher.DataBind();
         }
         protected void GridViewStudent_RowEditing(object sender, GridViewEditEventArgs e)
@@ -73,7 +74,7 @@ namespace WebClient
         protected void OnUpdateStudent(object sender, EventArgs e)
         {
             GridViewRow row = (sender as LinkButton).NamingContainer as GridViewRow;
-            DataTable students = ViewState["students"] as DataTable;
+            DataTable students = Session["students"] as DataTable;
 
             int StudentId = Convert.ToInt32(students.Rows[row.RowIndex]["Id"]);
             string StudentName = ((TextBox)row.Cells[1].Controls[0]).Text;
@@ -93,15 +94,17 @@ namespace WebClient
                 students.Rows[row.RowIndex]["Name"] = StudentName;
                 students.Rows[row.RowIndex]["Class"] = StudentClass;
                 students.Rows[row.RowIndex]["RollNo"] = StudentRollNo;
-                ViewState["students"] = students;
+                Session["students"] = students;
             }
             GridViewStudent.EditIndex = -1;
             BindGridStudent();
+            Response.Redirect("StudentsAndTeachers.aspx");
+
         }
         protected void OnUpdateTeacher(object sender, EventArgs e)
         {
             GridViewRow row = (sender as LinkButton).NamingContainer as GridViewRow;
-            DataTable teachers = ViewState["teachers"] as DataTable;
+            DataTable teachers = Session["teachers"] as DataTable;
 
             int TeacherId = Convert.ToInt32(teachers.Rows[row.RowIndex]["Id"]);
             string TeacherName = ((TextBox)row.Cells[1].Controls[0]).Text;
@@ -121,10 +124,12 @@ namespace WebClient
                 teachers.Rows[row.RowIndex]["Name"] = TeacherName;
                 teachers.Rows[row.RowIndex]["Class"] = TeacherClass;
                 teachers.Rows[row.RowIndex]["Subject"] = TeacherSubject;
-                ViewState["teachers"] = teachers;
+                Session["teachers"] = teachers;
             }
             GridViewTeacher.EditIndex = -1;
             BindGridTeacher();
+            Response.Redirect("StudentsAndTeachers.aspx");
+
         }
         protected void OnCancelStudent(object sender, EventArgs e)
         {
@@ -139,37 +144,58 @@ namespace WebClient
 
         protected void OnDeleteStudent(object sender, EventArgs e)
         {
-          
+            
             GridViewRow row = (sender as LinkButton).NamingContainer as GridViewRow;
-            DataTable students = ViewState["students"] as DataTable;
+            DataTable students = Session["students"] as DataTable;
 
-            int StudentId = Convert.ToInt32(students.Rows[row.RowIndex]["Id"]);
-
-            StudentService.StudentServiceClient ssc = new StudentService.StudentServiceClient();
-            string resp = ssc.DeleteStudent(StudentId);
-            if (resp == "Student Deleted Successfully")
+            try
             {
-                students.Rows.RemoveAt(row.RowIndex);
+                int StudentId = Convert.ToInt32(students.Rows[row.RowIndex]["Id"]);
+                StudentService.StudentServiceClient ssc = new StudentService.StudentServiceClient();
+                string resp = ssc.DeleteStudent(StudentId);
+
+                if (resp == "Student Deleted Successfully")
+                {
+                    students.Rows.RemoveAt(row.RowIndex);
+
+                }
+                Session["students"] = students;
+                BindGridStudent();
+                Response.Redirect("StudentsAndTeachers.aspx");
+
             }
-            ViewState["students"] = students;
-            BindGridStudent();
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
+            
         }
+        
         protected void OnDeleteTeacher(object sender, EventArgs e)
         {
-
             GridViewRow row = (sender as LinkButton).NamingContainer as GridViewRow;
-            DataTable teachers = ViewState["teachers"] as DataTable;
-
-            int TeacherId = Convert.ToInt32(teachers.Rows[row.RowIndex]["Id"]);
-
-            TeacherService.TeacherServiceClient tsc = new TeacherService.TeacherServiceClient();
-            string resp = tsc.DeleteTeacher(TeacherId);
-            if (resp == "Teacher Deleted Successfully")
+            DataTable teachers = Session["teachers"] as DataTable;
+            try
             {
-                teachers.Rows.RemoveAt(row.RowIndex);
+                int TeacherId = Convert.ToInt32(teachers.Rows[row.RowIndex]["Id"]);
+
+                TeacherService.TeacherServiceClient tsc = new TeacherService.TeacherServiceClient();
+                string resp = tsc.DeleteTeacher(TeacherId);
+                if (resp == "Teacher Deleted Successfully")
+                {
+                    teachers.Rows.RemoveAt(row.RowIndex);
+                }
+                Session["teachers"] = teachers;
+                BindGridTeacher();
+                Response.Redirect("StudentsAndTeachers.aspx");
+
             }
-            ViewState["teachers"] = teachers;
-            BindGridTeacher();
+            catch (Exception ex)
+            {
+                Console.WriteLine (ex.Message);
+            }
         }
     }
 }

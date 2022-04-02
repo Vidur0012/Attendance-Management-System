@@ -22,8 +22,9 @@ namespace WebClient
                 DropDownList1.DataSource =  tl;
                 DropDownList1.DataTextField = "Name";
                 DropDownList1.DataValueField = "Id";
-                Session["SelectedTeacher"] = ts.GetTeacher(0);
+                DropDownList1.SelectedIndex = 0;
                 DropDownList1.DataBind();
+                Session["SelectedTeacher"] = ts.GetTeacher(Int32.Parse(DropDownList1.SelectedItem.Value));
             }
             
         }
@@ -37,7 +38,7 @@ namespace WebClient
             string validate = asc.AdminLogin(u_name,password);
             if (validate == "success")
             {
-                Label1.Text = "";
+                Session["admin"] = true;
                 Response.Redirect("/AdminPage.aspx");
             }
             else

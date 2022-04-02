@@ -64,6 +64,15 @@
             </div>
         </div>
     </form>
+    <script type="text/javascript" >
+            var style = document.getElementById("Label1").offsetLeft;
+            if (style >= 0) {
+                setTimeout(function () {
+                    document.getElementById("Label1").style.display = 'none';
+                }, 3000);
+
+            }
+    </script>
     <script src="Scripts/bootstrap.min.js"></script>
         </body>
     </html>

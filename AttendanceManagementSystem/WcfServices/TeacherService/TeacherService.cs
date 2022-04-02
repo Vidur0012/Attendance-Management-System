@@ -26,6 +26,11 @@ namespace WcfServices.TeacherService
         {
             try
             {
+                Teacher t_tmp = (from ts in db.TeacherModel where ts.Class == teacher.Class && ts.Subject.ToLower() == teacher.Subject.ToLower() select ts).FirstOrDefault();
+                if(t_tmp != null)
+                {
+                    return "Duplicate";
+                }
                 Teacher t = new Teacher();
                 t.Name = teacher.Name;
                 t.Subject = teacher.Subject;
@@ -37,7 +42,8 @@ namespace WcfServices.TeacherService
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                System.Diagnostics.Debug.Write(ex.Message);
+
                 return "Something went wrong!";
             }
         }
@@ -55,7 +61,8 @@ namespace WcfServices.TeacherService
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                System.Diagnostics.Debug.Write(ex.Message);
+
                 return "Something went wrong!";
             }
 
@@ -72,7 +79,8 @@ namespace WcfServices.TeacherService
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                System.Diagnostics.Debug.Write(ex.Message);
+
                 return "Something went wrong!";
             }
         }

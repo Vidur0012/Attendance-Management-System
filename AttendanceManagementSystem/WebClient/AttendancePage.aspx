@@ -32,7 +32,7 @@
                 
                 <h2>Attendance Sheet</h2>
 
-                <asp:Label ID="Label1" CssClass="form-control alert-danger" runat="server" Text="hello"></asp:Label>
+                <asp:Label ID="Label1" CssClass="form-control alert-success" runat="server" Text="hello"></asp:Label>
             </div>
             <div class="card-body">
                 <asp:GridView CssClass="auto-style1" runat="server" BackColor="White" BorderColor="#999999"

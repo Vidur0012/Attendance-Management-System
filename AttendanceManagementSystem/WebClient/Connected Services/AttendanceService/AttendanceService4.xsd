@@ -21,34 +21,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAllAttendanceByTeacher">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="tid" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllAttendanceByTeacherResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfServices.AttendanceService" minOccurs="0" name="GetAllAttendanceByTeacherResult" nillable="true" type="q3:ArrayOfAttendance" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllAttendanceByDate">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="dt" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllAttendanceByDateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServices.AttendanceService" minOccurs="0" name="GetAllAttendanceByDateResult" nillable="true" type="q4:ArrayOfAttendance" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="GetAllAttendanceByTeacherAndDate">
     <xs:complexType>
       <xs:sequence>
@@ -60,7 +32,7 @@
   <xs:element name="GetAllAttendanceByTeacherAndDateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfServices.AttendanceService" minOccurs="0" name="GetAllAttendanceByTeacherAndDateResult" nillable="true" type="q5:ArrayOfAttendance" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfServices.AttendanceService" minOccurs="0" name="GetAllAttendanceByTeacherAndDateResult" nillable="true" type="q3:ArrayOfAttendance" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

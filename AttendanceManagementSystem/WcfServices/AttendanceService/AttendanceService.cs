@@ -15,6 +15,12 @@ namespace WcfServices.AttendanceService
         {
             try
             {
+                IEnumerable<Attendance> x = GetAllAttendanceByTeacherAndDate(tid, dt);
+                int count = x.Count();
+                if (count >0 )
+                {
+                    return "Attendance Already Taken";
+                }
                 TeacherService.Teacher t = db.TeacherModel.Find(tid);
                 for (int i = 0; i < sids.Count; i++)
                 {
@@ -33,21 +39,21 @@ namespace WcfServices.AttendanceService
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                System.Diagnostics.Debug.Write(ex.Message);
                 return "Something went wrong!";
             }
         }
-        public IEnumerable<Attendance> GetAllAttendanceByTeacher(int tid)
-        {
-            IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.T.Id == tid select a;
+        //public IEnumerable<Attendance> GetAllAttendanceByTeacher(int tid)
+        //{
+        //    IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.T.Id == tid select a;
             
-            return lst;
-        }
-        public IEnumerable<Attendance> GetAllAttendanceByDate(DateTime dt)
-        {
-            IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.Date == dt select a;
-            return lst;
-        }
+        //    return lst;
+        //}
+        //public IEnumerable<Attendance> GetAllAttendanceByDate(DateTime dt)
+        //{
+        //    IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.Date == dt select a;
+        //    return lst;
+        //}
         public IEnumerable<Attendance> GetAllAttendanceByTeacherAndDate(int tid, DateTime dt)
         {
             IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.T.Id == tid select a;
