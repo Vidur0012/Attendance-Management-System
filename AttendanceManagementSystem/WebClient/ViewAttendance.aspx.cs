@@ -53,7 +53,6 @@ namespace WebClient
             {
                 AttendanceEntries.Add(new AttendanceEntry(stu_list[i].Id, stu_list[i].Name, stu_list[i].RollNo, attendance_list[i].Present));
             }
-
         }
     }
 }

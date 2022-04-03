@@ -9,24 +9,13 @@ namespace WebClient
 {
     public partial class HomePage : System.Web.UI.Page
     {
-        
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
-
                 Label1.Visible = false;
-                TeacherService.TeacherServiceClient ts = new TeacherService.TeacherServiceClient();
-                TeacherService.Teacher[] tl =   ts.GetTeachers();
-                DropDownList1.DataSource =  tl;
-                DropDownList1.DataTextField = "Name";
-                DropDownList1.DataValueField = "Id";
-                DropDownList1.SelectedIndex = 0;
-                DropDownList1.DataBind();
-                Session["SelectedTeacher"] = ts.GetTeacher(Int32.Parse(DropDownList1.SelectedItem.Value));
+                Label2.Visible = false;
             }
-            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -50,15 +39,21 @@ namespace WebClient
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AttendancePage.aspx");
-        }
-
-       
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TeacherService.TeacherServiceClient ts = new TeacherService.TeacherServiceClient();
-            Session["SelectedTeacher"] = ts.GetTeacher(Int32.Parse(DropDownList1.SelectedItem.Value));
+            TeacherService.TeacherServiceClient tsc = new TeacherService.TeacherServiceClient();
+            int cls = Int32.Parse(tclass.SelectedValue);
+            string sub = TextBox3.Text.ToString();
+            string pass = TextBox4.Text.ToString();
+            var resp = tsc.TeacherLogin(cls,sub,pass);
+            if(resp!=null)
+            {
+                Session["SelectedTeacher"] = resp;
+                Response.Redirect("AttendancePage.aspx");
+            }
+            else
+            {
+                Label2.Text = "Invalid Login Attempt";
+                Label2.Visible = true;
+            }
         }
     }
 }

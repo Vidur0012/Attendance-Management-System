@@ -15,7 +15,7 @@ namespace WcfServices.StudentService
         [OperationContract]
         List<Student> GetStudents();
         [OperationContract]
-        List<Student> GetStudentByClass(int cid);
+        List<Student> GetStudentsByClass(int cls);
 
         [OperationContract]
         Student GetStudent(int id);

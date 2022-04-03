@@ -11,7 +11,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
         <div class="card">
             <div class="card-header bg-dark text-white">
                 <h1>Teacher Name:&nbsp;&nbsp;<%=teacher.Name%>
@@ -20,18 +19,14 @@
                     </div>
                 </h1>
                 <h1>Class:&nbsp;&nbsp;<%=teacher.Class%>
-
                     <div style="float: right">
                         <a href="ViewAttendance.aspx" class="btn btn-info mx-5">View Attendance</a>
-
+                        <asp:Button ID="Button2" CssClass="btn btn-danger" runat="server" Text="Logout" OnClick="Button2_Click" />
                     </div>
                 </h1>
-
             </div>
             <div class="card-header text-center">
-                
                 <h2>Attendance Sheet</h2>
-
                 <asp:Label ID="Label1" CssClass="form-control alert-success" runat="server" Text="hello"></asp:Label>
             </div>
             <div class="card-body">
@@ -74,13 +69,7 @@
                     <asp:Button ID="Button1" OnClick="Button1_Click" class="btn btn-primary" runat="server" Text="Submit" />
                 </center>
             </div>
-
         </div>
-
-
-
-
-
     </form>
 </body>
 </html>

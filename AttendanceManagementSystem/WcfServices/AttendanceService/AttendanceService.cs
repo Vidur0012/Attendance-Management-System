@@ -11,7 +11,7 @@ namespace WcfServices.AttendanceService
     {
         private AttendanceManagement db = new AttendanceManagement();
 
-        public string AddAttendances(List<int> sids, List<bool> presents, int tid, DateTime dt, int cls, string sub)
+        public string AddAttendances(List<int> sids, List<bool> presents, int tid, DateTime dt)
         {
             try
             {
@@ -28,9 +28,7 @@ namespace WcfServices.AttendanceService
                     Attendance a = new Attendance();
                     a.S = s;
                     a.T = t;
-                    a.Class = cls;
-                    a.Subject = sub;
-                    a.Date = dt;
+                    a.Date = dt.Date;
                     a.Present = presents[i];
                     db.AttendanceModel.Add(a);
                     db.SaveChanges();
@@ -43,33 +41,15 @@ namespace WcfServices.AttendanceService
                 return "Something went wrong!";
             }
         }
-        //public IEnumerable<Attendance> GetAllAttendanceByTeacher(int tid)
-        //{
-        //    IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.T.Id == tid select a;
-            
-        //    return lst;
-        //}
-        //public IEnumerable<Attendance> GetAllAttendanceByDate(DateTime dt)
-        //{
-        //    IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.Date == dt select a;
-        //    return lst;
-        //}
+       
         public IEnumerable<Attendance> GetAllAttendanceByTeacherAndDate(int tid, DateTime dt)
         {
-            IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.T.Id == tid select a;
-            Func<Attendance, bool> filt = x =>
-             {
-                 DateTime d = x.Date;
-                 if (d.Date == dt.Date)
-                 {
-                     return true;
-                 }
-                 else
-                 {
-                     return false;
-                 }
-             };
-            lst = lst.Where(filt);
+            IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.T.Id == tid && a.Date ==dt select a;
+            return lst;
+        }
+        public IEnumerable<Attendance> GetAllAttendanceByStudentAndTeacher(int sid, int tid)
+        {
+            IEnumerable<Attendance> lst = from a in db.AttendanceModel where a.T.Id == tid && a.S.Id == sid select a;
             return lst;
         }
     }

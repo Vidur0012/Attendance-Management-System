@@ -23,9 +23,6 @@ namespace WebClient.AttendanceService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ClassField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -38,9 +35,6 @@ namespace WebClient.AttendanceService {
         private WebClient.AttendanceService.Student SField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SubjectField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private WebClient.AttendanceService.Teacher TField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -50,19 +44,6 @@ namespace WebClient.AttendanceService {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Class {
-            get {
-                return this.ClassField;
-            }
-            set {
-                if ((this.ClassField.Equals(value) != true)) {
-                    this.ClassField = value;
-                    this.RaisePropertyChanged("Class");
-                }
             }
         }
         
@@ -114,19 +95,6 @@ namespace WebClient.AttendanceService {
                 if ((object.ReferenceEquals(this.SField, value) != true)) {
                     this.SField = value;
                     this.RaisePropertyChanged("S");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Subject {
-            get {
-                return this.SubjectField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SubjectField, value) != true)) {
-                    this.SubjectField = value;
-                    this.RaisePropertyChanged("Subject");
                 }
             }
         }
@@ -266,6 +234,9 @@ namespace WebClient.AttendanceService {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SubjectField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -318,6 +289,19 @@ namespace WebClient.AttendanceService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Subject {
             get {
                 return this.SubjectField;
@@ -345,16 +329,24 @@ namespace WebClient.AttendanceService {
     public interface IAttendanceService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/AddAttendances", ReplyAction="http://tempuri.org/IAttendanceService/AddAttendancesResponse")]
-        string AddAttendances(int[] sids, bool[] presents, int tid, System.DateTime dt, int cls, string sub);
+        string AddAttendances(int[] sids, bool[] presents, int tid, System.DateTime dt);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/AddAttendances", ReplyAction="http://tempuri.org/IAttendanceService/AddAttendancesResponse")]
-        System.Threading.Tasks.Task<string> AddAttendancesAsync(int[] sids, bool[] presents, int tid, System.DateTime dt, int cls, string sub);
+        System.Threading.Tasks.Task<string> AddAttendancesAsync(int[] sids, bool[] presents, int tid, System.DateTime dt);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDate", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDateResponse")]
         WebClient.AttendanceService.Attendance[] GetAllAttendanceByTeacherAndDate(int tid, System.DateTime dt);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDate", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByTeacherAndDateResponse")]
         System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByTeacherAndDateAsync(int tid, System.DateTime dt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByStudentAndTeacher", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByStudentAndTeacherResponse" +
+            "")]
+        WebClient.AttendanceService.Attendance[] GetAllAttendanceByStudentAndTeacher(int sid, int tid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceService/GetAllAttendanceByStudentAndTeacher", ReplyAction="http://tempuri.org/IAttendanceService/GetAllAttendanceByStudentAndTeacherResponse" +
+            "")]
+        System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByStudentAndTeacherAsync(int sid, int tid);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -384,12 +376,12 @@ namespace WebClient.AttendanceService {
                 base(binding, remoteAddress) {
         }
         
-        public string AddAttendances(int[] sids, bool[] presents, int tid, System.DateTime dt, int cls, string sub) {
-            return base.Channel.AddAttendances(sids, presents, tid, dt, cls, sub);
+        public string AddAttendances(int[] sids, bool[] presents, int tid, System.DateTime dt) {
+            return base.Channel.AddAttendances(sids, presents, tid, dt);
         }
         
-        public System.Threading.Tasks.Task<string> AddAttendancesAsync(int[] sids, bool[] presents, int tid, System.DateTime dt, int cls, string sub) {
-            return base.Channel.AddAttendancesAsync(sids, presents, tid, dt, cls, sub);
+        public System.Threading.Tasks.Task<string> AddAttendancesAsync(int[] sids, bool[] presents, int tid, System.DateTime dt) {
+            return base.Channel.AddAttendancesAsync(sids, presents, tid, dt);
         }
         
         public WebClient.AttendanceService.Attendance[] GetAllAttendanceByTeacherAndDate(int tid, System.DateTime dt) {
@@ -398,6 +390,14 @@ namespace WebClient.AttendanceService {
         
         public System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByTeacherAndDateAsync(int tid, System.DateTime dt) {
             return base.Channel.GetAllAttendanceByTeacherAndDateAsync(tid, dt);
+        }
+        
+        public WebClient.AttendanceService.Attendance[] GetAllAttendanceByStudentAndTeacher(int sid, int tid) {
+            return base.Channel.GetAllAttendanceByStudentAndTeacher(sid, tid);
+        }
+        
+        public System.Threading.Tasks.Task<WebClient.AttendanceService.Attendance[]> GetAllAttendanceByStudentAndTeacherAsync(int sid, int tid) {
+            return base.Channel.GetAllAttendanceByStudentAndTeacherAsync(sid, tid);
         }
     }
 }

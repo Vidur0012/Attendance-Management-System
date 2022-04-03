@@ -29,7 +29,7 @@ namespace WcfServices.StudentService
                 Student s_tmp = (from st in db.StudentModel where st.Class == student.Class && st.RollNo == student.RollNo select st ).FirstOrDefault();
                 if(s_tmp != null)
                 {
-                    return "Duplicate";
+                    return "Student Already Exist!";
                 }
                 Student s = new Student();
                 s.Name = student.Name;
@@ -38,7 +38,7 @@ namespace WcfServices.StudentService
 
                 db.StudentModel.Add(s);
                 db.SaveChanges();
-                return "Student Added Successfull";
+                return "Student Added Successfully.";
             }
             catch (Exception ex)
             {
@@ -58,7 +58,7 @@ namespace WcfServices.StudentService
                 s.RollNo = student.RollNo;
 
                 db.SaveChanges();
-                return "Student Updated Successfully!!";
+                return "Student Updated Successfully.";
             }
             catch (Exception ex)
             {
@@ -76,7 +76,7 @@ namespace WcfServices.StudentService
                 Student s = db.StudentModel.Where(o => o.Id == id).FirstOrDefault();
                 db.StudentModel.Remove(s);
                 db.SaveChanges();
-                return "Student Deleted Successfully";
+                return "Student Deleted Successfully.";
             }
             catch (Exception ex)
             {
@@ -85,9 +85,9 @@ namespace WcfServices.StudentService
             }
         }
 
-        public List<Student> GetStudentByClass(int cid)
+        public List<Student> GetStudentsByClass(int cls)
         {
-            List<Student> students = (from a in db.StudentModel where a.Class == cid select a).ToList();
+            List<Student> students = (from a in db.StudentModel where a.Class == cls select a).ToList();
             return students;
         }
     }

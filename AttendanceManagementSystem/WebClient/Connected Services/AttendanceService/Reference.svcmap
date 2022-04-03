@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="1fbb0478-2637-4dff-a967-b7f6aea58392" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b2235800-3caa-4391-a6ad-da9f45c21177" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,14 +22,14 @@
     <MetadataSource Address="http://localhost:9000/AMSServices/AttendanceService" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AttendanceService.xsd" MetadataType="Schema" ID="54891dcf-0050-49ee-8c2a-ca86811befd8" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd2" />
-    <MetadataFile FileName="AttendanceService1.xsd" MetadataType="Schema" ID="80496325-e704-4187-bdcf-033622310e5b" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd4" />
-    <MetadataFile FileName="AttendanceService.disco" MetadataType="Disco" ID="cecf5b72-75b8-45f7-81fe-13e63163fcae" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?disco" />
-    <MetadataFile FileName="AttendanceService2.xsd" MetadataType="Schema" ID="2fc7a4d0-46d2-4be8-8d64-0568e0f4935c" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd3" />
-    <MetadataFile FileName="AttendanceService3.xsd" MetadataType="Schema" ID="cee8e10f-2d80-470c-b879-c3ce8520962d" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd5" />
-    <MetadataFile FileName="AttendanceService.wsdl" MetadataType="Wsdl" ID="5249c0e8-7e81-4f1d-9755-bdfdbed53bdc" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?wsdl" />
-    <MetadataFile FileName="AttendanceService4.xsd" MetadataType="Schema" ID="2e0f8b2b-5b57-4517-9f15-eb2b514793d9" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd0" />
-    <MetadataFile FileName="AttendanceService5.xsd" MetadataType="Schema" ID="6cda0f41-0262-47f0-bff0-faeb07e8b0c0" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd1" />
+    <MetadataFile FileName="AttendanceService.wsdl" MetadataType="Wsdl" ID="2eeb6142-70dc-40ea-ab9b-5c8af6e64033" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?wsdl" />
+    <MetadataFile FileName="AttendanceService.disco" MetadataType="Disco" ID="6450cf89-e2a6-455a-87dd-604adcb6a5a1" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?disco" />
+    <MetadataFile FileName="AttendanceService.xsd" MetadataType="Schema" ID="be2c628b-74cc-43ed-a90c-80023a085ee3" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd3" />
+    <MetadataFile FileName="AttendanceService1.xsd" MetadataType="Schema" ID="08e1be7f-4e5f-4be2-a71f-4544c9566faa" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd1" />
+    <MetadataFile FileName="AttendanceService2.xsd" MetadataType="Schema" ID="b9e4a47e-3b4e-4aee-9985-4f61c8487fb3" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd2" />
+    <MetadataFile FileName="AttendanceService3.xsd" MetadataType="Schema" ID="34c3d3ab-b0a3-436f-9e31-ba6d4340e1a8" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd5" />
+    <MetadataFile FileName="AttendanceService4.xsd" MetadataType="Schema" ID="eeb97fa1-581b-4fd4-b6c3-a7b9cd3f2600" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd0" />
+    <MetadataFile FileName="AttendanceService5.xsd" MetadataType="Schema" ID="b399c05a-5fef-4fee-b1ca-baf39b3a8c35" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AttendanceService?xsd=xsd4" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

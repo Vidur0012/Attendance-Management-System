@@ -18,5 +18,7 @@ namespace WcfServices.TeacherService
         public int Class { get; set; }
         [DataMember]
         public string Subject { get; set; }
+        [DataMember]
+        public string Password { get; set; }
     }
 }

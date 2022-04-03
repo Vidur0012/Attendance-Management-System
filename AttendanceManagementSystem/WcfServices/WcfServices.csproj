@@ -62,7 +62,6 @@
     <Compile Include="AttendanceService\Attendance.cs" />
     <Compile Include="AttendanceService\AttendanceService.cs" />
     <Compile Include="AttendanceService\IAttendanceService.cs" />
-    <Compile Include="IService1.cs" />
     <Compile Include="Migrations\202203290641361_initial.cs" />
     <Compile Include="Migrations\202203290641361_initial.designer.cs">
       <DependentUpon>202203290641361_initial.cs</DependentUpon>
@@ -71,9 +70,16 @@
     <Compile Include="Migrations\202203291304597_attendanceModel.designer.cs">
       <DependentUpon>202203291304597_attendanceModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204021529315_Added_Password_In_Teacher.cs" />
+    <Compile Include="Migrations\202204021529315_Added_Password_In_Teacher.designer.cs">
+      <DependentUpon>202204021529315_Added_Password_In_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204021625552_removed_Subject_and_Class_Coulmn_Attendance.cs" />
+    <Compile Include="Migrations\202204021625552_removed_Subject_and_Class_Coulmn_Attendance.designer.cs">
+      <DependentUpon>202204021625552_removed_Subject_and_Class_Coulmn_Attendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service1.cs" />
     <Compile Include="StudentService\IStudentService.cs" />
     <Compile Include="StudentService\Student.cs" />
     <Compile Include="StudentService\StudentService.cs" />
@@ -91,6 +97,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203291304597_attendanceModel.resx">
       <DependentUpon>202203291304597_attendanceModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204021529315_Added_Password_In_Teacher.resx">
+      <DependentUpon>202204021529315_Added_Password_In_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204021625552_removed_Subject_and_Class_Coulmn_Attendance.resx">
+      <DependentUpon>202204021625552_removed_Subject_and_Class_Coulmn_Attendance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

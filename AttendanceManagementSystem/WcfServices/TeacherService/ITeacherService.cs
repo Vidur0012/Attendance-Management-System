@@ -26,6 +26,11 @@ namespace WcfServices.TeacherService
 
         [OperationContract]
         string UpdateTeacher(Teacher teacher);
+        [OperationContract]
+        Teacher TeacherLogin(int cls, string subject, string password);
+        [OperationContract]
+
+        List<Teacher> GetTeachersByClass(int cls);
 
     }
 }

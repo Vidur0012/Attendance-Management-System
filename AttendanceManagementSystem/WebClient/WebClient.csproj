@@ -69,7 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ViewAttendance.aspx" />
     <None Include="Connected Services\AdminService\AdminService.disco" />
     <None Include="Connected Services\AdminService\configuration91.svcinfo" />
     <None Include="Connected Services\AdminService\configuration.svcinfo" />
@@ -109,15 +108,6 @@
     <None Include="Connected Services\StudentService\StudentService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="assets\img\home.png" />
-    <Content Include="AttendancePage.aspx" />
-    <None Include="Connected Services\AttendanceService\AttendanceService.disco" />
-    <None Include="Connected Services\AttendanceService\configuration91.svcinfo" />
-    <None Include="Connected Services\AttendanceService\configuration.svcinfo" />
-    <None Include="Connected Services\AttendanceService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Connected Services\StudentService\WebClient.StudentService.Student.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -128,7 +118,13 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="AdminPage.aspx" />
+    <None Include="Connected Services\AttendanceService\AttendanceService.disco" />
+    <None Include="Connected Services\AttendanceService\configuration91.svcinfo" />
+    <None Include="Connected Services\AttendanceService\configuration.svcinfo" />
+    <None Include="Connected Services\AttendanceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Connected Services\StudentService\StudentService.disco" />
     <None Include="Connected Services\StudentService\configuration91.svcinfo" />
     <None Include="Connected Services\StudentService\configuration.svcinfo" />
@@ -136,6 +132,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="ViewAttendance.aspx" />
+    <Content Include="assets\img\home.png" />
+    <Content Include="AttendancePage.aspx" />
+    <Content Include="AdminPage.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -160,7 +160,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="StudentsAndTeachers.aspx" />
-    <Content Include="TeachersForm.aspx" />
+    <Content Include="ViewAttendancePerStudent.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -213,13 +213,6 @@
     <Compile Include="StudentsAndTeachers.aspx.designer.cs">
       <DependentUpon>StudentsAndTeachers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TeachersForm.aspx.cs">
-      <DependentUpon>TeachersForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TeachersForm.aspx.designer.cs">
-      <DependentUpon>TeachersForm.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewAttendance.aspx.cs">
       <DependentUpon>ViewAttendance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -227,15 +220,15 @@
     <Compile Include="ViewAttendance.aspx.designer.cs">
       <DependentUpon>ViewAttendance.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewAttendancePerStudent.aspx.cs">
+      <DependentUpon>ViewAttendancePerStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAttendancePerStudent.aspx.designer.cs">
+      <DependentUpon>ViewAttendancePerStudent.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\AdminService\AdminService.wsdl" />
-    <None Include="Connected Services\AdminService\AdminService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\AdminService\AdminService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
@@ -252,6 +245,13 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Connected Services\AdminService\AdminService.wsdl" />
+    <None Include="Connected Services\AdminService\AdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminService\AdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\TeacherService\TeacherService.wsdl" />
     <None Include="Connected Services\TeacherService\TeacherService.xsd">
       <SubType>Designer</SubType>

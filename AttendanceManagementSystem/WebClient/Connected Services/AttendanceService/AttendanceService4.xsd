@@ -9,8 +9,6 @@
         <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="presents" nillable="true" type="q2:ArrayOfboolean" />
         <xs:element minOccurs="0" name="tid" type="xs:int" />
         <xs:element minOccurs="0" name="dt" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="cls" type="xs:int" />
-        <xs:element minOccurs="0" name="sub" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -33,6 +31,21 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfServices.AttendanceService" minOccurs="0" name="GetAllAttendanceByTeacherAndDateResult" nillable="true" type="q3:ArrayOfAttendance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAttendanceByStudentAndTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sid" type="xs:int" />
+        <xs:element minOccurs="0" name="tid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAttendanceByStudentAndTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServices.AttendanceService" minOccurs="0" name="GetAllAttendanceByStudentAndTeacherResult" nillable="true" type="q4:ArrayOfAttendance" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

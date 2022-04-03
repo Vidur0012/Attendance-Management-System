@@ -11,11 +11,10 @@ namespace WcfServices.AttendanceService
     public interface IAttendanceService
     {
         [OperationContract]
-        string AddAttendances(List<int> sids, List<bool> presents, int tid, DateTime dt, int cls, string sub);
+        string AddAttendances(List<int> sids, List<bool> presents, int tid, DateTime dt);
         [OperationContract]
         IEnumerable<Attendance> GetAllAttendanceByTeacherAndDate(int tid, DateTime dt);
-
-
-
+        [OperationContract]
+        IEnumerable<Attendance> GetAllAttendanceByStudentAndTeacher(int sid, int tid);
     }
 }

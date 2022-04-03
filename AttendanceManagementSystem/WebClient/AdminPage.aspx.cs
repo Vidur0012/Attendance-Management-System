@@ -31,6 +31,7 @@ namespace WebClient
             t.Name = Tname.Text;
             t.Class = Int32.Parse( tclass.SelectedValue);
             t.Subject = subject.Text;
+            t.Password = password.Text;
             string response = ts.AddTeacher(t);
             Label1.Enabled=true;
             Label1.Text = response;
@@ -43,12 +44,10 @@ namespace WebClient
            
             s.Name = Sname.Text;
             s.RollNo = Int32.Parse(rollno.Text);
-            s.Class = Int32.Parse(DropDownList1.SelectedValue);
+            s.Class = Int32.Parse(sclass.SelectedValue);
             string response = sc.AddStudent(s);
             Label1.Enabled = true;
             Label1.Text=response;
-
-
         }
 
         protected void Button4_Click(object sender, EventArgs e)

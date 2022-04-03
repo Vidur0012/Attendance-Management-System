@@ -1,4 +1,3 @@
-C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.csproj.AssemblyReference.cache
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.csproj.CoreCompileInputs.cache
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\ConsoleHost.exe.config
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\bin\Debug\ConsoleHost.exe
@@ -29,3 +28,4 @@ E:\Sem 6\SOC\Project\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHos
 E:\Sem 6\SOC\Project\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.csproj.CopyComplete
 E:\Sem 6\SOC\Project\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.exe
 E:\Sem 6\SOC\Project\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.pdb
+C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\ConsoleHost\obj\Debug\ConsoleHost.csproj.AssemblyReference.cache

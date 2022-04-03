@@ -21,7 +21,7 @@ namespace WebClient
                 int Class = teacher.Class;
 
                 StudentService.StudentServiceClient student = new StudentService.StudentServiceClient();
-                stu_list = student.GetStudentByClass(Class);
+                stu_list = student.GetStudentsByClass(Class);
                 Session["student_list"] = stu_list;
                 Label1.Visible = false;
 
@@ -56,12 +56,9 @@ namespace WebClient
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //List<int> sids, List< bool > presents, int tid, DateTime dt, int cls, string sub
             List<int> student_list = stu_list.Select(s => s.Id).ToList();
             int t_id = teacher.Id;
-            int cid = teacher.Class;
-            string sub = teacher.Subject;
-            DateTime date = DateTime.Now;
+            DateTime date = DateTime.Now.Date;
             List<bool> present = new List<bool>();
             foreach (GridViewRow gvrow in gvData.Rows)
             {
@@ -76,10 +73,15 @@ namespace WebClient
                 }
             }
            
-           Label1.Visible = true;
+            Label1.Visible = true;
             AttendanceService.AttendanceServiceClient asc = new AttendanceService.AttendanceServiceClient();
-            Label1.Text =  asc.AddAttendances(student_list.ToArray(),present.ToArray(),t_id,date,cid,sub );
+            Label1.Text = asc.AddAttendances(student_list.ToArray(), present.ToArray(), t_id, date);
 
+        }
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("HomePage.aspx");
         }
     }
 }

@@ -12,12 +12,10 @@ namespace WcfServices.AttendanceService
     {
         [DataMember]
         public int Id { get; set; }
-        [DataMember]
-        public int Class { get; set; }
+       
         [DataMember]
         public DateTime Date { get; set; }
-        [DataMember]
-        public string Subject { get; set; }
+
         [DataMember]
         public bool Present { get; set; }
         [DataMember]

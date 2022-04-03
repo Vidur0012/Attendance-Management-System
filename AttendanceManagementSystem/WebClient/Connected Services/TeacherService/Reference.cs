@@ -32,6 +32,9 @@ namespace WebClient.TeacherService {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SubjectField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -79,6 +82,19 @@ namespace WebClient.TeacherService {
                 if ((object.ReferenceEquals(this.NameField, value) != true)) {
                     this.NameField = value;
                     this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
                 }
             }
         }
@@ -139,6 +155,18 @@ namespace WebClient.TeacherService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/UpdateTeacher", ReplyAction="http://tempuri.org/ITeacherService/UpdateTeacherResponse")]
         System.Threading.Tasks.Task<string> UpdateTeacherAsync(WebClient.TeacherService.Teacher teacher);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/TeacherLogin", ReplyAction="http://tempuri.org/ITeacherService/TeacherLoginResponse")]
+        WebClient.TeacherService.Teacher TeacherLogin(int cls, string subject, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/TeacherLogin", ReplyAction="http://tempuri.org/ITeacherService/TeacherLoginResponse")]
+        System.Threading.Tasks.Task<WebClient.TeacherService.Teacher> TeacherLoginAsync(int cls, string subject, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/GetTeachersByClass", ReplyAction="http://tempuri.org/ITeacherService/GetTeachersByClassResponse")]
+        WebClient.TeacherService.Teacher[] GetTeachersByClass(int cls);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/GetTeachersByClass", ReplyAction="http://tempuri.org/ITeacherService/GetTeachersByClassResponse")]
+        System.Threading.Tasks.Task<WebClient.TeacherService.Teacher[]> GetTeachersByClassAsync(int cls);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -206,6 +234,22 @@ namespace WebClient.TeacherService {
         
         public System.Threading.Tasks.Task<string> UpdateTeacherAsync(WebClient.TeacherService.Teacher teacher) {
             return base.Channel.UpdateTeacherAsync(teacher);
+        }
+        
+        public WebClient.TeacherService.Teacher TeacherLogin(int cls, string subject, string password) {
+            return base.Channel.TeacherLogin(cls, subject, password);
+        }
+        
+        public System.Threading.Tasks.Task<WebClient.TeacherService.Teacher> TeacherLoginAsync(int cls, string subject, string password) {
+            return base.Channel.TeacherLoginAsync(cls, subject, password);
+        }
+        
+        public WebClient.TeacherService.Teacher[] GetTeachersByClass(int cls) {
+            return base.Channel.GetTeachersByClass(cls);
+        }
+        
+        public System.Threading.Tasks.Task<WebClient.TeacherService.Teacher[]> GetTeachersByClassAsync(int cls) {
+            return base.Channel.GetTeachersByClassAsync(cls);
         }
     }
 }
