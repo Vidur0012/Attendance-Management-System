@@ -9,22 +9,23 @@
     <link href="Content/bootstrap.rtl.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: navajowhite">
     <form id="form1" runat="server">
-        <div class="card">
-            <div class="card-header bg-dark text-white">
-                <h1>Teacher Name:&nbsp;&nbsp;<%=teacher.Name%>
-                    <div style="float: right">
-                        Today's Date : <%=DateTime.Now.ToString("dddd, MMMM dd yyyy")%>
-                    </div>
-                </h1>
-                <h1>Class:&nbsp;&nbsp;<%=teacher.Class%>
-                    <div style="float: right">
-                        Select date
+
+        <div class="card-header bg-dark text-white">
+            <h1>Teacher Name:&nbsp;&nbsp;<%=teacher.Name%>
+                <div style="float: right">
+                    Today's Date : <%=DateTime.Now.ToString("dddd, MMMM dd yyyy")%>
+                </div>
+            </h1>
+            <h1>Class:&nbsp;&nbsp;<%=teacher.Class%>
+                <div style="float: right">
+                    Select date
                         <asp:TextBox OnTextChanged="TextBox1_TextChanged" AutoPostBack="true" CssClass="h3" ID="TextBox1" TextMode="Date" runat="server"></asp:TextBox>
-                    </div>
-                </h1>
-            </div>
+                </div>
+            </h1>
+        </div>
+        <div class="card mt-5">
             <div class="card-header text-center">
                 <h2>View Attendance</h2>
             </div>

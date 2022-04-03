@@ -52,6 +52,11 @@ namespace WcfServices.TeacherService
         {
             try
             {
+                Teacher t_tmp = (from ts in db.TeacherModel where ts.Class == teacher.Class && ts.Subject.ToLower() == teacher.Subject.ToLower() select ts).FirstOrDefault();
+                if (t_tmp != null)
+                {
+                    return "Teacher Already Exist!";
+                }
                 Teacher t = db.TeacherModel.Where(o => o.Id == teacher.Id).FirstOrDefault();
                 t.Name = teacher.Name;
                 t.Subject = teacher.Subject;

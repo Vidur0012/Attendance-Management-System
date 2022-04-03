@@ -9,7 +9,7 @@
     <link href="Content/bootstrap.rtl.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color:navajowhite">
     <form id="form1" runat="server">
         <div class="card">
             <div class="card-header bg-dark text-white">

@@ -20,7 +20,7 @@
             </div>
         </h1>
         <asp:Label ID="Label1" runat="server" class="form-control alert-success" Text=""></asp:Label>
-        <div class="page-content page-container card-body" id="page-content">
+        <div class="page-content page-container card-body" id="page-content" style="background-color:antiquewhite">
             <div class="padding">
                 <div class="row">
 

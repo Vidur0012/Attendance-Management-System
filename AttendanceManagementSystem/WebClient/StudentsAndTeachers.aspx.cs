@@ -53,6 +53,7 @@ namespace WebClient
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label1.Visible = false;
             DataTable students = Session["students"] as DataTable;
             DataTable teachers = Session["teachers"] as DataTable;
 
@@ -124,10 +125,17 @@ namespace WebClient
                 students.Rows[row.RowIndex]["Class"] = StudentClass;
                 students.Rows[row.RowIndex]["RollNo"] = StudentRollNo;
                 Session["students"] = students;
+                GridViewStudent.EditIndex = -1;
+                BindGridStudent();
+                Response.Redirect("StudentsAndTeachers.aspx");
             }
-            GridViewStudent.EditIndex = -1;
-            BindGridStudent();
-            Response.Redirect("StudentsAndTeachers.aspx");
+            else
+            {
+                Label1.Text = resp;
+                Label1.Visible = true;
+
+            }
+            
 
         }
         protected void OnUpdateTeacher(object sender, EventArgs e)
@@ -156,10 +164,17 @@ namespace WebClient
                 teachers.Rows[row.RowIndex]["Subject"] = TeacherSubject;
                 teachers.Rows[row.RowIndex]["Password"] = TeacherPassword;
                 Session["teachers"] = teachers;
+                GridViewTeacher.EditIndex = -1;
+                BindGridTeacher();
+                Response.Redirect("StudentsAndTeachers.aspx");
             }
-            GridViewTeacher.EditIndex = -1;
-            BindGridTeacher();
-            Response.Redirect("StudentsAndTeachers.aspx");
+            else
+            {
+                Label1.Visible = true;
+                Label1.Text = resp;
+
+            }
+           
 
         }
         protected void OnCancelStudent(object sender, EventArgs e)
@@ -291,5 +306,15 @@ namespace WebClient
             FetchTeachers(Int32.Parse(tclass.SelectedValue));
         }
 
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminPage.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("HomePage.aspx");
+        }
     }
 }

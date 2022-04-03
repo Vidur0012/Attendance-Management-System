@@ -9,24 +9,25 @@
     <link href="Content/bootstrap.rtl.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: navajowhite">
     <form id="form1" runat="server">
-        <div class="card">
-            <div class="card-header bg-dark text-white">
-                <h1>Student Name:&nbsp;&nbsp;<%=student.Name %>
-                    <div style="float: right">
-                        Roll No:&nbsp;&nbsp;<%=student.RollNo %>
-                    </div>
-                </h1>
-                <h1>Class:&nbsp;&nbsp;<%=student.Class %>
-                    <div style="float: right" class="row">
-                        Select Subject : &nbsp;
+
+        <div class="card-header bg-dark text-white">
+            <h1>Student Name:&nbsp;&nbsp;<%=student.Name %>
+                <div style="float: right">
+                    Roll No:&nbsp;&nbsp;<%=student.RollNo %>
+                </div>
+            </h1>
+            <h1>Class:&nbsp;&nbsp;<%=student.Class %>
+                <div style="float: right" class="row">
+                    Select Subject : &nbsp;
                         <asp:DropDownList class="col mt-2 fs-3 dropdown-toggle" data-toggle="dropdown"
                             ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Height="40px" Width="200px">
                         </asp:DropDownList>
-                    </div>
-                </h1>
-            </div>
+                </div>
+            </h1>
+        </div>
+        <div class="card mt-5">
             <div class="card-header text-center">
                 <h2>View Attendance</h2>
             </div>

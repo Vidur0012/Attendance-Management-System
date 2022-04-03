@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a867c408-c4b2-4d05-8a7c-1057420c7cb7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="a867c408-c4b2-4d05-8a7c-1057420c7cb7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,9 +22,9 @@
     <MetadataSource Address="http://localhost:9000/AMSServices/AdminService" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AdminService.xsd" MetadataType="Schema" ID="671efa5e-67dc-470d-a155-e38f071fd9b2" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AdminService?xsd=xsd1" />
     <MetadataFile FileName="AdminService.wsdl" MetadataType="Wsdl" ID="a72191af-9d74-419b-a9d4-25b8c684d590" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AdminService?wsdl" />
     <MetadataFile FileName="AdminService.disco" MetadataType="Disco" ID="684987bb-03f9-4ef2-94bc-16a3ad3443ed" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AdminService?disco" />
+    <MetadataFile FileName="AdminService.xsd" MetadataType="Schema" ID="671efa5e-67dc-470d-a155-e38f071fd9b2" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AdminService?xsd=xsd1" />
     <MetadataFile FileName="AdminService1.xsd" MetadataType="Schema" ID="2ec2232b-a9e8-4c0d-8ac0-a734686b8491" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/AdminService?xsd=xsd0" />
   </Metadata>
   <Extensions>

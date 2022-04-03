@@ -52,6 +52,11 @@ namespace WcfServices.StudentService
         {
             try
             {
+                Student s_tmp = (from st in db.StudentModel where st.Class == student.Class && st.RollNo == student.RollNo select st).FirstOrDefault();
+                if (s_tmp != null)
+                {
+                    return "Student Already Exist!";
+                }
                 Student s = db.StudentModel.Where(o => o.Id == student.Id).FirstOrDefault();
                 s.Name = student.Name;
                 s.Class = student.Class;

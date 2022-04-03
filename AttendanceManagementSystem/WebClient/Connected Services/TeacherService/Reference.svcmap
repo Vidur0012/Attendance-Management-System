@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ad17207a-98fb-41f8-a7af-5c8af28063eb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ad17207a-98fb-41f8-a7af-5c8af28063eb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:9000/AMSServices/TeacherService" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TeacherService.xsd" MetadataType="Schema" ID="20272bd8-39cb-4105-8614-c5f1885882cd" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/TeacherService?xsd=xsd1" />
     <MetadataFile FileName="TeacherService.disco" MetadataType="Disco" ID="95347081-1cac-424c-b5c7-2a5d00085530" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/TeacherService?disco" />
     <MetadataFile FileName="TeacherService1.xsd" MetadataType="Schema" ID="15b9065a-bbe2-4b4d-b7ef-df2a313aabaa" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/TeacherService?xsd=xsd2" />
-    <MetadataFile FileName="TeacherService.wsdl" MetadataType="Wsdl" ID="e03e199c-3899-472d-bb1d-dde241fa4a32" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/TeacherService?wsdl" />
     <MetadataFile FileName="TeacherService2.xsd" MetadataType="Schema" ID="8d891c47-0af2-4295-9ae2-4d414f01b439" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/TeacherService?xsd=xsd0" />
+    <MetadataFile FileName="TeacherService.wsdl" MetadataType="Wsdl" ID="e03e199c-3899-472d-bb1d-dde241fa4a32" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/TeacherService?wsdl" />
+    <MetadataFile FileName="TeacherService.xsd" MetadataType="Schema" ID="20272bd8-39cb-4105-8614-c5f1885882cd" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/TeacherService?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
