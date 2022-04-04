@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="9c52ebba-a6e9-4b4d-9a61-c5423208e7cd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9c52ebba-a6e9-4b4d-9a61-c5423208e7cd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:9000/AMSServices/StudentService" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="StudentService1.xsd" MetadataType="Schema" ID="223ea237-def1-46d4-a395-7edc24f6e163" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/StudentService?xsd=xsd0" />
     <MetadataFile FileName="StudentService.wsdl" MetadataType="Wsdl" ID="9fbff70d-df49-4dcc-9c0d-62a3706c4763" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/StudentService?wsdl" />
-    <MetadataFile FileName="StudentService.xsd" MetadataType="Schema" ID="bb3c2540-1882-4384-af77-9705a5c32f92" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/StudentService?xsd=xsd2" />
     <MetadataFile FileName="StudentService.disco" MetadataType="Disco" ID="8ebcc9f7-7976-4962-bbc0-2cd0c915875d" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/StudentService?disco" />
+    <MetadataFile FileName="StudentService.xsd" MetadataType="Schema" ID="bb3c2540-1882-4384-af77-9705a5c32f92" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/StudentService?xsd=xsd2" />
+    <MetadataFile FileName="StudentService1.xsd" MetadataType="Schema" ID="223ea237-def1-46d4-a395-7edc24f6e163" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/StudentService?xsd=xsd0" />
     <MetadataFile FileName="StudentService2.xsd" MetadataType="Schema" ID="63d87557-2225-4784-b2d4-ea5f4fa71444" SourceId="1" SourceUrl="http://localhost:9000/AMSServices/StudentService?xsd=xsd1" />
   </Metadata>
   <Extensions>

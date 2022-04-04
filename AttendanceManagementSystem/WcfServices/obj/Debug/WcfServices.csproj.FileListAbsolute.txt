@@ -29,6 +29,5 @@ C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServi
 E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.attendanceModel.resources
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.Added_Password_In_Teacher.resources
 C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.removed_Subject_and_Class_Coulmn_Attendance.resources
-C:\Users\vidur\source\repos\SOC_project_sem6\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.csproj.AssemblyReference.cache
 E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.Added_Password_In_Teacher.resources
 E:\Sem 6\SOC\Project\AttendanceManagementSystem\WcfServices\obj\Debug\WcfServices.Migrations.removed_Subject_and_Class_Coulmn_Attendance.resources
